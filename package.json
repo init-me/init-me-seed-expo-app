@@ -1,0 +1,71 @@
+{
+  "name": "init-me-seed-expo-app",
+  "version": "0.1.0",
+  "description": "init-me seed init-me-seed-expo-app",
+  "main": "output/index.js",
+  "types": "output/index.d.ts",
+  "scripts": {
+    "eslint": "eslint --ext=jsx,ts,tsx ./",
+    "prettier": "prettier --write ./",
+    "d": "tsc",
+    "w": "tsc --watch",
+    "prepublishOnly": "yarn prettier && yarn d",
+    "test": "jest ./test"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest": true
+    },
+    "extends": [
+      "yyl-react"
+    ],
+    "rules": {
+      "indent": 0
+    }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "output",
+    "test"
+  ],
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "quoteProps": "consistent",
+    "trailingComma": "none",
+    "printWidth": 100
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "keywords": [
+    "init-me",
+    "seed",
+    "init-me-seed-expo-app"
+  ],
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/inquirer": "^8.2.4",
+    "init-me-seed-types": "^2.0.5",
+    "inquirer": "^8.2.4",
+    "yyl-os": "0.14.4",
+    "yyl-print": "0.9.2",
+    "yyl-replacer": "0.3.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.3",
+    "eslint": "^8.7.0",
+    "eslint-config-yyl-react": "^2.0.0",
+    "jest": "^29.0.3",
+    "prettier": "^2.5.1",
+    "ts-jest": "^29.0.1",
+    "typescript": "^5.1.6",
+    "yyl-fs": "0.3.2",
+    "yyl-util": "2.3.5"
+  }
+}
