@@ -116,7 +116,7 @@ const seed: InitMeSeed.Config = {
       const rPaths = [
         path.join(targetPath, 'package.json'),
         path.join(targetPath, 'README.md'),
-        path.join(targetPath, 'app.json'),
+        path.join(targetPath, 'app.json')
       ]
       rPaths.forEach((iPath) => {
         const cnt = fs.readFileSync(iPath).toString()

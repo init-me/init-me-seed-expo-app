@@ -124,7 +124,7 @@ const seed = {
                 const rPaths = [
                     path_1.default.join(targetPath, 'package.json'),
                     path_1.default.join(targetPath, 'README.md'),
-                    path_1.default.join(targetPath, 'app.json'),
+                    path_1.default.join(targetPath, 'app.json')
                 ];
                 rPaths.forEach((iPath) => {
                     const cnt = fs_1.default.readFileSync(iPath).toString();
