@@ -60,7 +60,6 @@ const seed: InitMeSeed.Config = {
       const types = fs.readdirSync(SEED_PATH).filter((iPath) => {
         return !/^\./.test(iPath)
       })
-      console.log('=== type', types)
       if (types.length === 1) {
         initData.type = types[0]
       } else {
@@ -82,7 +81,13 @@ const seed: InitMeSeed.Config = {
       }
       // - type
 
-      console.log('=== seed.path', seed.path)
+      if (questions.length) {
+        const r = await inquirer.prompt(questions)
+        if (r.name) {
+          initData = Object.assign(initData, r)
+        }
+      }
+
       seed.path = path.join(SEED_PATH, initData.type)
     },
     /**
